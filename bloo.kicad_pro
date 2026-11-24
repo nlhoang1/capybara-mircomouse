@@ -39,9 +39,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.0,
-          "height": 1.524,
-          "width": 1.524
+          "drill": 2.2,
+          "height": 2.2,
+          "width": 2.2
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -154,7 +154,7 @@
         "allow_microvias": true,
         "max_error": 0.005,
         "min_clearance": 0.25,
-        "min_connection": 0.1,
+        "min_connection": 0.3,
         "min_copper_edge_clearance": 0.0,
         "min_groove_width": 0.0,
         "min_hole_clearance": 0.25,
@@ -166,7 +166,7 @@
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.115,
+        "min_track_width": 0.3,
         "min_via_annular_width": 0.13,
         "min_via_diameter": 0.6,
         "solder_mask_to_copper_clearance": 0.0,
@@ -535,7 +535,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.13,
+        "clearance": 0.25,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -546,11 +546,65 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.13,
+        "track_width": 0.3,
         "tuning_profile": "",
         "via_diameter": 0.8,
         "via_drill": 0.4,
         "wire_width": 6
+      },
+      {
+        "clearance": 0.25,
+        "name": "ANALOG_GND",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 1.0,
+        "tuning_profile": ""
+      },
+      {
+        "clearance": 0.25,
+        "name": "ANALOG_POWER",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 1,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.5,
+        "tuning_profile": ""
+      },
+      {
+        "clearance": 0.25,
+        "name": "Battery",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 5,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 2.0,
+        "tuning_profile": ""
+      },
+      {
+        "clearance": 0.25,
+        "name": "MAIN_POWER",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 3,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 1.25,
+        "tuning_profile": ""
+      },
+      {
+        "clearance": 0.25,
+        "name": "MOTOR_OUTPUT",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 2,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.5,
+        "tuning_profile": ""
+      },
+      {
+        "clearance": 0.25,
+        "name": "VCC_POWER",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 4,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 1.5,
+        "tuning_profile": ""
       }
     ],
     "meta": {
@@ -558,7 +612,52 @@
     },
     "net_colors": {},
     "netclass_assignments": {},
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "VCC_POWER",
+        "pattern": "VCC"
+      },
+      {
+        "netclass": "MAIN_POWER",
+        "pattern": "+5V"
+      },
+      {
+        "netclass": "MAIN_POWER",
+        "pattern": "+3V3"
+      },
+      {
+        "netclass": "MOTOR_OUTPUT",
+        "pattern": "M1_OUT_1"
+      },
+      {
+        "netclass": "MOTOR_OUTPUT",
+        "pattern": "M2_OUT_2"
+      },
+      {
+        "netclass": "ANALOG_POWER",
+        "pattern": "+3.3VA"
+      },
+      {
+        "netclass": "ANALOG_GND",
+        "pattern": "AGND"
+      },
+      {
+        "netclass": "Default",
+        "pattern": ""
+      },
+      {
+        "netclass": "MOTOR_OUTPUT",
+        "pattern": "M1_OUT_*"
+      },
+      {
+        "netclass": "MOTOR_OUTPUT",
+        "pattern": "M2_OUT_*"
+      },
+      {
+        "netclass": "Battery",
+        "pattern": "Net-(BT1-+)"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
