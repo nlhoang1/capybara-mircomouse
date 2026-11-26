@@ -553,10 +553,19 @@
         "wire_width": 6
       },
       {
+        "clearance": 0.3,
+        "name": "3V3_BYP",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.3,
+        "tuning_profile": ""
+      },
+      {
         "clearance": 0.25,
         "name": "ANALOG_GND",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 0,
+        "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 1.0,
         "tuning_profile": ""
@@ -565,7 +574,7 @@
         "clearance": 0.25,
         "name": "ANALOG_POWER",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 1,
+        "priority": 2,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.5,
         "tuning_profile": ""
@@ -574,7 +583,7 @@
         "clearance": 0.25,
         "name": "Battery",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 5,
+        "priority": 6,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 2.0,
         "tuning_profile": ""
@@ -583,7 +592,7 @@
         "clearance": 0.25,
         "name": "MAIN_POWER",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 3,
+        "priority": 4,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 1.25,
         "tuning_profile": ""
@@ -592,7 +601,7 @@
         "clearance": 0.25,
         "name": "MOTOR_OUTPUT",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 2,
+        "priority": 3,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.5,
         "tuning_profile": ""
@@ -601,7 +610,7 @@
         "clearance": 0.25,
         "name": "VCC_POWER",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 4,
+        "priority": 5,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 1.5,
         "tuning_profile": ""
@@ -656,6 +665,14 @@
       {
         "netclass": "Battery",
         "pattern": "Net-(BT1-+)"
+      },
+      {
+        "netclass": "Battery",
+        "pattern": "Net-(S1-Pad3)"
+      },
+      {
+        "netclass": "3V3_BYP",
+        "pattern": "3V3_BYP"
       }
     ]
   },
